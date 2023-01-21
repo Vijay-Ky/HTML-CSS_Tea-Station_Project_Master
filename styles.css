@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Grand+Hotel&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --slantedText: 'Grand Hotel', cursive;
+    --headingFont: 'Catamaran', sans-serif;
+    --primaryColor: #698f3f;
+    --secondaryColor: #fca311;
+    --mainDark: #3a3e3b;
+    --mainWhite: #fff;
+    --mainGrey: #e5e5e5;
+    --mainTransition: all 0.3s ease-in-out;
+    --letterSpacing: 0.5rem
+}
+
+body
+{
+    font-family: var(--headingFont);
+    line-height: 1.5;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.text-white
+{
+    color: var(--mainWhite);
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.text-primary
+{
+    color: var(--primaryColor);
+}
+
+/* clearfix */
+.clearfix::after,
+.cleafix::before
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* globals */
+.section-center
+{
+    padding: 4rem 0;
+    width: 80vw;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.section-subtitle
+{
+    font-size: 2rem;
+    font-family: var(--slantedText);
+    letter-spacing: var(--letterSpacing);
+    text-transform: capitalize;
+    color: var(--primaryColor);
+}
+
+.section-title
+{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.nav-btn
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: var(--primaryColor);
+    margin: 1rem 1.3rem;
+    font-size: 2rem;
+    animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.5);
+    } 
+    100%
+    {
+        transform: scale(1);
+    }   
+}
+
+.navbar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: var(--mainGrey);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    transition: var(--mainTransition);
+    /* transform */
+    transform: translateX(-100%);
+}
+
+.showNav
+{
+    transform: translateX(0);
+}
+
+.nav-close
+{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-items
+{
+    list-style-type: none;
+}
+
+.nav-link
+{
+    display: block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--primaryColor);
+    transition: var(--mainTransition);
+}
+
+.nav-link:hover
+{
+    color: var(--mainDark);
+    padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px)
+{
+    .navbar
+    {
+        width: 30vw;
+        max-width: 20rem;
+    }
+}
+
+.header
+{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/main-bcg.jpg") center/cover no-repeat fixed;
+}
+
+/* banner */
+.banner
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    letter-spacing: var(--letterSpacing);
+}
+
+
+
+
+
+
