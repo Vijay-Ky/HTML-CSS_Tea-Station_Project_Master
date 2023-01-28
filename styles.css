@@ -181,6 +181,77 @@ a
     letter-spacing: var(--letterSpacing);
 }
 
+.banner-subtitle
+{
+    font-size: 2rem;
+    font-family: var(--slantedText);
+    color: var(--primaryColor);
+    /* animation */
+    animation: slideFromRight 5s ease-in-out;
+
+}
+
+@keyframes slideFromRight
+{
+    0%
+    {
+        transform: translateX(1000px);
+    } 
+    
+    50%
+    {
+        transform: translateX(-200px);
+    }  
+
+    75%
+    {
+        transform: translateX(50px);
+    } 
+
+    100%
+    {
+        transform: translateX(0px);
+    } 
+}
+
+.banner-title
+{
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    color: var(--mainWhite);
+    margin-top: 2.5rem;
+    line-height: 1.3;
+    /* animation */
+    animation: slideFromLeft 5s ease-in-out;;
+}
+
+@keyframes slideFromLeft
+{
+    0%
+    {
+        transform: translateX(-1000px);
+    } 
+    
+    50%
+    {
+        transform: translateX(200px);
+    }  
+
+    75%
+    {
+        transform: translateX(-50px);
+    } 
+
+    100%
+    {
+        transform: translateX(0px);
+    } 
+}
+
+
+
+
+
 
 
 
